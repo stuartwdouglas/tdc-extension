@@ -1,5 +1,4 @@
 package com.github.stuartwdouglas.tdcextension;
 
-public class HelloWorldBuildStep {
-
+public class EmptyTestCase {
 }

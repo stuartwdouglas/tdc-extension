@@ -16,12 +16,13 @@
     <packaging>pom</packaging>
 
     <properties>
-        <quarkus.version>0.18.0</quarkus.version>
+        <quarkus.version>0.19.0</quarkus.version>
     </properties>
 
     <modules>
         <module>deployment</module>
         <module>runtime</module>
+        <module>app</module>
     </modules>
 
     <dependencyManagement>
@@ -35,4 +36,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+                <version>${quarkus.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
