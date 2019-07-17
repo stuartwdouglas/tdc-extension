@@ -21,6 +21,7 @@ public class WebHandlerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("application/json");
         Object instace = CDI.current().select(method.getDeclaringClass()).get();
         try {
             Object result = method.invoke(instace);
